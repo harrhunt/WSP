@@ -1,0 +1,183 @@
+{
+  "average_link": {
+    "score": 0.1444850293919444,
+    "time": 0.002224445343017578,
+    "start_wsp": {
+      "name": "cat.n.4",
+      "definition": "a whip with nine knotted cords",
+      "onyms": [
+        "cat-o'-nine-tails",
+        "cat",
+        "whip"
+      ]
+    },
+    "end_wsp": {
+      "name": "dog.n.1",
+      "definition": "a dull unattractive unpleasant girl or woman",
+      "onyms": [
+        "dog",
+        "frump",
+        "disagreeable_woman",
+        "unpleasant_woman"
+      ]
+    }
+  },
+  "average_vector": {
+    "score": 0.7712176442146301,
+    "time": 2.0740768909454346,
+    "start_wsp": {
+      "name": "cat.n.1",
+      "definition": "an informal term for a youth or man",
+      "onyms": [
+        "guy",
+        "man",
+        "sod",
+        "hombre",
+        "adult_male",
+        "bozo",
+        "cat"
+      ]
+    },
+    "end_wsp": {
+      "name": "dog.n.2",
+      "definition": "informal term for a man",
+      "onyms": [
+        "feller",
+        "gent",
+        "blighter",
+        "bloke",
+        "lad",
+        "fella",
+        "fellow",
+        "dog",
+        "cuss",
+        "chap"
+      ]
+    }
+  },
+  "complete_link": {
+    "score": 0.07477199286222458,
+    "time": 0.0022301673889160156,
+    "start_wsp": {
+      "name": "cat.n.4",
+      "definition": "a whip with nine knotted cords",
+      "onyms": [
+        "cat-o'-nine-tails",
+        "cat",
+        "whip"
+      ]
+    },
+    "end_wsp": {
+      "name": "dog.n.1",
+      "definition": "a dull unattractive unpleasant girl or woman",
+      "onyms": [
+        "dog",
+        "frump",
+        "disagreeable_woman",
+        "unpleasant_woman"
+      ]
+    }
+  },
+  "single_link": {
+    "score": 0.760945737361908,
+    "time": 0.0023932456970214844,
+    "start_wsp": {
+      "name": "cat.n.0",
+      "definition": "feline mammal usually having thick soft fur and no ability to roar: domestic cats; wildcats",
+      "onyms": [
+        "feline",
+        "true_cat",
+        "Felis_catus",
+        "Felis_domesticus",
+        "felid",
+        "house_cat",
+        "wildcat",
+        "domestic_cat",
+        "cat"
+      ]
+    },
+    "end_wsp": {
+      "name": "dog.n.0",
+      "definition": "a member of the genus Canis (probably descended from the common wolf) that has been domesticated by man since prehistoric times; occurs in many breeds",
+      "onyms": [
+        "pug",
+        "Belgian_griffon",
+        "Mexican_hairless",
+        "toy",
+        "flag",
+        "basenji",
+        "poodle",
+        "Great_Pyrenees",
+        "bow-wow",
+        "coach_dog",
+        "Leonberg",
+        "carriage_dog",
+        "corgi",
+        "hunting_dog",
+        "doggy",
+        "Brussels_griffon",
+        "toy_dog",
+        "puppy",
+        "mongrel",
+        "spitz",
+        "Welsh_corgi",
+        "pug-dog",
+        "genus_Canis",
+        "domestic_dog",
+        "working_dog",
+        "pack",
+        "pooch",
+        "Canis_familiaris",
+        "canid",
+        "dog",
+        "domestic_animal",
+        "Newfoundland",
+        "poodle_dog",
+        "cur",
+        "domesticated_animal",
+        "griffon",
+        "doggie",
+        "canine",
+        "lapdog",
+        "mutt",
+        "barker",
+        "Canis",
+        "dalmatian",
+        "Newfoundland_dog"
+      ]
+    }
+  },
+  "total_vector": {
+    "score": 0.7712176442146301,
+    "time": 1.8558647632598877,
+    "start_wsp": {
+      "name": "cat.n.1",
+      "definition": "an informal term for a youth or man",
+      "onyms": [
+        "guy",
+        "man",
+        "sod",
+        "hombre",
+        "adult_male",
+        "bozo",
+        "cat"
+      ]
+    },
+    "end_wsp": {
+      "name": "dog.n.2",
+      "definition": "informal term for a man",
+      "onyms": [
+        "feller",
+        "gent",
+        "blighter",
+        "bloke",
+        "lad",
+        "fella",
+        "fellow",
+        "dog",
+        "cuss",
+        "chap"
+      ]
+    }
+  }
+}

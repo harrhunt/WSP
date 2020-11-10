@@ -1,0 +1,148 @@
+{
+  "average_link": {
+    "score": 0.11786725837737322,
+    "time": 4.553794860839844e-05,
+    "start_wsp": {
+      "name": "memory.n.4",
+      "definition": "the area of cognitive psychology that studies memory processes",
+      "onyms": [
+        "cognitive_psychology",
+        "memory"
+      ]
+    },
+    "end_wsp": {
+      "name": "brain.n.4",
+      "definition": "the brain of certain animals used as meat",
+      "onyms": [
+        "calf's_brain",
+        "variety_meat",
+        "brain",
+        "organs"
+      ]
+    }
+  },
+  "average_vector": {
+    "score": 0.5558379888534546,
+    "time": 1.378960132598877,
+    "start_wsp": {
+      "name": "memory.n.4",
+      "definition": "the area of cognitive psychology that studies memory processes",
+      "onyms": [
+        "cognitive_psychology",
+        "memory"
+      ]
+    },
+    "end_wsp": {
+      "name": "brain.n.2",
+      "definition": "that which is responsible for one's thoughts and feelings; the seat of the faculty of reason",
+      "onyms": [
+        "psyche",
+        "tabula_rasa",
+        "unconscious_mind",
+        "subconscious",
+        "head",
+        "noesis",
+        "brain",
+        "mind",
+        "ego",
+        "subconscious_mind",
+        "nous",
+        "knowledge",
+        "unconscious",
+        "cognition",
+        "noddle"
+      ]
+    }
+  },
+  "complete_link": {
+    "score": 0.0741352066397667,
+    "time": 4.267692565917969e-05,
+    "start_wsp": {
+      "name": "memory.n.4",
+      "definition": "the area of cognitive psychology that studies memory processes",
+      "onyms": [
+        "cognitive_psychology",
+        "memory"
+      ]
+    },
+    "end_wsp": {
+      "name": "brain.n.1",
+      "definition": "mental ability",
+      "onyms": [
+        "mental_capacity",
+        "mentality",
+        "wit",
+        "intelligence",
+        "brain",
+        "learning_ability",
+        "brainpower"
+      ]
+    }
+  },
+  "single_link": {
+    "score": 0.4862118661403656,
+    "time": 4.2438507080078125e-05,
+    "start_wsp": {
+      "name": "memory.n.4",
+      "definition": "the area of cognitive psychology that studies memory processes",
+      "onyms": [
+        "cognitive_psychology",
+        "memory"
+      ]
+    },
+    "end_wsp": {
+      "name": "brain.n.2",
+      "definition": "that which is responsible for one's thoughts and feelings; the seat of the faculty of reason",
+      "onyms": [
+        "psyche",
+        "tabula_rasa",
+        "unconscious_mind",
+        "subconscious",
+        "head",
+        "noesis",
+        "brain",
+        "mind",
+        "ego",
+        "subconscious_mind",
+        "nous",
+        "knowledge",
+        "unconscious",
+        "cognition",
+        "noddle"
+      ]
+    }
+  },
+  "total_vector": {
+    "score": 0.5558379888534546,
+    "time": 1.3405940532684326,
+    "start_wsp": {
+      "name": "memory.n.4",
+      "definition": "the area of cognitive psychology that studies memory processes",
+      "onyms": [
+        "cognitive_psychology",
+        "memory"
+      ]
+    },
+    "end_wsp": {
+      "name": "brain.n.2",
+      "definition": "that which is responsible for one's thoughts and feelings; the seat of the faculty of reason",
+      "onyms": [
+        "psyche",
+        "tabula_rasa",
+        "unconscious_mind",
+        "subconscious",
+        "head",
+        "noesis",
+        "brain",
+        "mind",
+        "ego",
+        "subconscious_mind",
+        "nous",
+        "knowledge",
+        "unconscious",
+        "cognition",
+        "noddle"
+      ]
+    }
+  }
+}

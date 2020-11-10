@@ -1,0 +1,145 @@
+{
+  "average_link": {
+    "score": 0.030750911773389414,
+    "time": 0.0001347064971923828,
+    "start_wsp": {
+      "name": "plane.s.8",
+      "definition": "having a surface without slope, tilt in which no part is higher or lower than another",
+      "onyms": [
+        "plane",
+        "flat",
+        "level"
+      ]
+    },
+    "end_wsp": {
+      "name": "mathematics.n.0",
+      "definition": "a science (or group of related sciences) dealing with the logic of quantity and shape and arrangement",
+      "onyms": [
+        "pure_mathematics",
+        "scientific_discipline",
+        "science",
+        "applied_mathematics",
+        "applied_math",
+        "math",
+        "maths",
+        "mathematics"
+      ]
+    }
+  },
+  "average_vector": {
+    "score": 0.25666213035583496,
+    "time": 1.8624541759490967,
+    "start_wsp": {
+      "name": "plane.n.2",
+      "definition": "a level of existence or development",
+      "onyms": [
+        "point",
+        "level",
+        "plane",
+        "stage",
+        "degree"
+      ]
+    },
+    "end_wsp": {
+      "name": "mathematics.n.0",
+      "definition": "a science (or group of related sciences) dealing with the logic of quantity and shape and arrangement",
+      "onyms": [
+        "pure_mathematics",
+        "scientific_discipline",
+        "science",
+        "applied_mathematics",
+        "applied_math",
+        "math",
+        "maths",
+        "mathematics"
+      ]
+    }
+  },
+  "complete_link": {
+    "score": 0.012745615094900131,
+    "time": 0.0001811981201171875,
+    "start_wsp": {
+      "name": "plane.n.2",
+      "definition": "a level of existence or development",
+      "onyms": [
+        "point",
+        "level",
+        "plane",
+        "stage",
+        "degree"
+      ]
+    },
+    "end_wsp": {
+      "name": "mathematics.n.0",
+      "definition": "a science (or group of related sciences) dealing with the logic of quantity and shape and arrangement",
+      "onyms": [
+        "pure_mathematics",
+        "scientific_discipline",
+        "science",
+        "applied_mathematics",
+        "applied_math",
+        "math",
+        "maths",
+        "mathematics"
+      ]
+    }
+  },
+  "single_link": {
+    "score": 0.3348625898361206,
+    "time": 0.00016427040100097656,
+    "start_wsp": {
+      "name": "plane.n.2",
+      "definition": "a level of existence or development",
+      "onyms": [
+        "point",
+        "level",
+        "plane",
+        "stage",
+        "degree"
+      ]
+    },
+    "end_wsp": {
+      "name": "mathematics.n.0",
+      "definition": "a science (or group of related sciences) dealing with the logic of quantity and shape and arrangement",
+      "onyms": [
+        "pure_mathematics",
+        "scientific_discipline",
+        "science",
+        "applied_mathematics",
+        "applied_math",
+        "math",
+        "maths",
+        "mathematics"
+      ]
+    }
+  },
+  "total_vector": {
+    "score": 0.2566621005535126,
+    "time": 1.8977670669555664,
+    "start_wsp": {
+      "name": "plane.n.2",
+      "definition": "a level of existence or development",
+      "onyms": [
+        "point",
+        "level",
+        "plane",
+        "stage",
+        "degree"
+      ]
+    },
+    "end_wsp": {
+      "name": "mathematics.n.0",
+      "definition": "a science (or group of related sciences) dealing with the logic of quantity and shape and arrangement",
+      "onyms": [
+        "pure_mathematics",
+        "scientific_discipline",
+        "science",
+        "applied_mathematics",
+        "applied_math",
+        "math",
+        "maths",
+        "mathematics"
+      ]
+    }
+  }
+}
