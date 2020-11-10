@@ -1,13 +1,13 @@
+import inspect
+import json
+import time
 from typing import List, Set
-from math import log
 from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
-from search import Google
 from word2vec import Word2Vec
 import numpy as np
 
 STOPWORDS = set(stopwords.words('english'))
-INDEXED_PAGES = 130000000000000
 
 
 class WSP:
@@ -18,7 +18,8 @@ class WSP:
         self.pos: chr = synset.pos()
         self.num: int = num
         self.onyms: Set[str] = set()
-        self.name = f"{word}.{self.synset.pos}.{num}"
+        self.name = f"{word}.{self.pos}.{num}"
+        self.definition = synset.definition()
         self.construct_wsp()
 
     def construct_wsp(self):
@@ -48,7 +49,7 @@ class WSP:
         holonyms.extend(self.synset.substance_holonyms())
 
         # Glossary
-        definition = [word for word in self.synset.definition() if not word in STOPWORDS]
+        definition = [word for word in self.definition if word not in STOPWORDS]
 
         # All synsets from the different -onyms
         all_synsets = [synonyms]
@@ -63,6 +64,8 @@ class WSP:
             lemmas.extend(synset.lemmas())
         for lemma in lemmas:
             self.onyms.add(lemma.name())
+
+        self.onyms.union(set(definition))
 
 
 class WSG:
@@ -82,74 +85,170 @@ class WSG:
 class WSPComparer:
 
     @classmethod
-    def wsp_similarity(cls, start: WSP, end: WSP):
-        total_vector = np.zeros(shape=(300,), dtype=np.float32)
-        for word in start.onyms:
-            if Word2Vec.contains(word):
-                total_vector = np.add(Word2Vec.vector(word), total_vector)
-        Word2Vec.add_vector(start.name, total_vector)
-        return Word2Vec.similarity(start.name, end.word)
+    def single_link(cls, start: WSP, end: WSP):
+        """
+        Smallest distance between any two points in start and end
+        :param start: The starting word sense profile (WSP)
+        :param end: The ending word sense profile (WSP)
+        :return: The cosine similarity of the closest two points in start and end
+        """
+        # Start at largest possible distance
+        shortest_distance = -1
+
+        # Iterate through words in both sets
+        for start_word in start.onyms:
+            if Word2Vec.contains(start_word):
+                for end_word in end.onyms:
+                    if Word2Vec.contains(end_word):
+                        distance = Word2Vec.similarity(start_word, end_word)
+                        # If the distance is shorter, update the shortest distance
+                        if distance > shortest_distance:
+                            shortest_distance = distance
+        return float(shortest_distance)
 
     @classmethod
-    def average_distance(cls, start: WSP, end: WSP):
+    def complete_link(cls, start: WSP, end: WSP):
+        """
+        Largest distance between any two points in start and end
+        :param start: The starting word sense profile (WSP)
+        :param end: The ending word sense profile (WSP)
+        :return: The cosine similarity of the furthest two points in start and end
+        """
+        # Start at the shortest possible distance
+        greatest_distance = 1
+
+        # Iterate through words in both sets
+        for start_word in start.onyms:
+            if Word2Vec.contains(start_word):
+                for end_word in end.onyms:
+                    if Word2Vec.contains(end_word):
+                        distance = Word2Vec.similarity(start_word, end_word)
+                        # If the distance is larger, update the greatest distance
+                        if distance < greatest_distance:
+                            greatest_distance = distance
+        return float(greatest_distance)
+
+    @classmethod
+    def average_link(cls, start: WSP, end: WSP):
+        """
+        Average distance between any two points in start and end
+        :param start: The starting word sense profile (WSP)
+        :param end: The ending word sense profile (WSP)
+        :return: The average cosine similarity of all pairs of words in start and end
+        """
         total_distance = 0
-        for word in start.onyms:
-            if Word2Vec.contains(word):
-                total_distance += cls.distance(word, end.word)
-        average_distance = total_distance / len(start.onyms)
-        return average_distance
+
+        # Keep track of sizes since some words may not be in W2V and may get skipped...
+        # May give inaccurate results otherwise
+        size_of_start = 0
+        size_of_end = 0
+        for start_word in start.onyms:
+            if Word2Vec.contains(start_word):
+                size_of_start += 1
+                for end_word in end.onyms:
+                    if Word2Vec.contains(end_word):
+                        size_of_end += 1
+                        total_distance += Word2Vec.similarity(start_word, end_word)
+        # Average distance is equal to all of the distances between
+        # each pair of words divided by the product of the number of words in each set
+        average_distance = total_distance / (size_of_start * size_of_end)
+        return float(average_distance)
 
     @classmethod
-    def distance(cls, start: str, end: str):
-        return Word2Vec.similarity(start, end)
+    def total_vector(cls, start: WSP, end: WSP):
+        """
+        The similarity between all vectors (added) for all words in start and all vectors (added) for all words in end
+        :param start: The starting word sense profile (WSP)
+        :param end: The ending word sense profile (WSP)
+        :return: The cosine similarity of the total vectors for start and end
+        """
+        start_total_vector = np.zeros(shape=(300,), dtype=float)
+        end_total_vector = np.zeros(shape=(300,), dtype=float)
+        for start_word in start.onyms:
+            if Word2Vec.contains(start_word):
+                start_total_vector = np.add(Word2Vec.vector(start_word), start_total_vector)
+        for end_word in end.onyms:
+            if Word2Vec.contains(end_word):
+                end_total_vector = np.add(Word2Vec.vector(end_word), end_total_vector)
+
+        # Add the vector for each WSP to the W2V model and treat them as their own vectors
+        Word2Vec.add_vector(start.name, start_total_vector)
+        Word2Vec.add_vector(end.name, end_total_vector)
+        # Then return the similarity of the two WSPs
+        return float(Word2Vec.similarity(start.name, end.name))
 
     @classmethod
-    def average_ngd(cls, start: WSP, end: WSP):
-        total_ngd = 0
-        for word in start.onyms:
-            total_ngd += cls.ngd(word, end.word)
-        average_ngd = total_ngd / len(start.onyms)
-        return average_ngd
+    def average_vector(cls, start: WSP, end: WSP):
+        """
+        The similarity between all vectors (averaged) for all words in start and all vectors (averaged) for all words in end
+        :param start: The starting word sense profile (WSP)
+        :param end: The ending word sense profile (WSP)
+        :return: The cosine similarity of the average vectors for start and end
+        """
+        start_total_vector = np.zeros(shape=(300,), dtype=float)
+        end_total_vector = np.zeros(shape=(300,), dtype=float)
+        size_of_start = 0
+        size_of_end = 0
+        for start_word in start.onyms:
+            if Word2Vec.contains(start_word):
+                size_of_start += 1
+                start_total_vector = np.add(Word2Vec.vector(start_word), start_total_vector)
+        for end_word in end.onyms:
+            if Word2Vec.contains(end_word):
+                size_of_end += 1
+                end_total_vector = np.add(Word2Vec.vector(end_word), end_total_vector)
 
-    @classmethod
-    def ngd(cls, start: str, end: str):
-        start_hits = Google.get_hits(start)
-        end_hits = Google.get_hits(end)
-        start_end_hits = Google.get_hits(f"{start} {end}")
-        log_start_hits = log(start_hits)
-        log_end_hits = log(end_hits)
-        log_start_end_hits = log(start_end_hits)
-        # max{log(f(x)), log(f(y))} - log(f(x, y))
-        # -------------------------------------
-        # log(N) - min{log(f(x)), log(f(y))}
-        ngd_score = (max(log_start_hits, log_end_hits) - log_start_end_hits) / (
-                log(INDEXED_PAGES) - min(log_start_hits, log_end_hits))
-        return ngd_score
+        # Get the average vector for both the start and end WSPs...
+        start_average_vector = np.true_divide(start_total_vector, size_of_start)
+        end_average_vector = np.true_divide(end_total_vector, size_of_end)
+        # then add them to the W2V model...
+        Word2Vec.add_vector(start.name, start_average_vector)
+        Word2Vec.add_vector(end.name, end_average_vector)
+        # and return the similarity between the two WSPs
+        return float(Word2Vec.similarity(start.name, end.name))
+
+
+COMPARING_METHODS = {x[0]: x[1] for x in inspect.getmembers(WSPComparer, predicate=inspect.ismethod) if
+                     x[1].__code__.co_argcount == 3 and {'start', 'end'}.issubset(set(x[1].__code__.co_varnames))}
+
+
+def test_comparisons(start_word: str, end_word: str):
+    start = WSG(start_word)
+    end = WSG(end_word)
+    data = {}
+    start_time = 0
+    end_time = 0
+
+    for method in COMPARING_METHODS:
+        print(method)
+        comparison = COMPARING_METHODS[method]
+        best_score = -1
+        matched_start_wsp = None
+        matched_end_wsp = None
+        for start_wsp in start.wsp_list:
+            for end_wsp in end.wsp_list:
+                start_time = time.time()
+                score = comparison(start_wsp, end_wsp)
+                end_time = time.time()
+                if score > best_score:
+                    print(start_wsp.name, end_wsp.name)
+                    best_score = score
+                    matched_start_wsp = start_wsp
+                    matched_end_wsp = end_wsp
+        data[method] = {"score": best_score, "time": (end_time - start_time),
+                        "start_wsp": {"name": matched_start_wsp.name, "definition": matched_start_wsp.definition,
+                                      "onyms": list(matched_start_wsp.onyms)},
+                        "end_wsp": {"name": matched_end_wsp.name, "definition": matched_end_wsp.definition,
+                                    "onyms": list(matched_end_wsp.onyms)}}
+    return data
 
 
 if __name__ == '__main__':
-    # dog = WSG("plane")
-    # print(f"{[(x.word, x.pos, x.num) for x in dog.wsp_list]}")
-    # print(f"{[x.synset.hyponyms() for x in dog.wsp_list]}")
-    dog = WSG("sewing")
-    cat = WSG("batting")
-    print(cat.wsp_list[1].onyms)
-    best_score = 0
-    matched_wsp = None
-    for wsp in dog.wsp_list:
-        score = WSPComparer.average_distance(wsp, cat.wsp_list[1])
-        # print(f"{wsp.word}\n -> \n{wsp.onyms}\n -> \nscore: {score}\n")
-        if score > best_score:
-            best_score = score
-            matched_wsp = wsp
-    print(f"{matched_wsp.word} -> {best_score} -> {matched_wsp.synset.definition()}\n{matched_wsp.onyms}")
-    best_score = 0
-    matched_wsp = None
-    for wsp in dog.wsp_list:
-        score = WSPComparer.wsp_similarity(wsp, cat.wsp_list[1])
-        # print(f"{wsp.word}\n -> \n{wsp.onyms}\n -> \nscore: {score}\n")
-        if score > best_score:
-            best_score = score
-            matched_wsp = wsp
-    print(f"{matched_wsp.word} -> {best_score} -> {matched_wsp.synset.definition()}\n{matched_wsp.onyms}")
-    # print(WSPComparer.average_ngd(plane.wsp_list[0], vehicle.wsp_list[0]))
+    word_pairs = [("plane", "mathematics"), ("plane", "machine"), ("batting", "baseball"), ("sewing", "batting"),
+                  ("machine", "computer"), ("computer", "memory"), ("memory", "brain"), ("brain", "ideas")]
+    for word_pair in word_pairs:
+        word1 = word_pair[0]
+        word2 = word_pair[1]
+        results = test_comparisons(word1, word2)
+        with open(f"data/comparisons/{word1}-{word2}.json", "w") as file:
+            json.dump(results, file, indent=2)
