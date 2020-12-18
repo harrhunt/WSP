@@ -6,6 +6,7 @@ from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
 from word2vec import Word2Vec
 import numpy as np
+from os import path
 
 STOPWORDS = set(stopwords.words('english'))
 
@@ -219,36 +220,43 @@ def test_comparisons(start_word: str, end_word: str):
     start_time = 0
     end_time = 0
 
-    for method in COMPARING_METHODS:
-        print(method)
-        comparison = COMPARING_METHODS[method]
-        best_score = -1
-        matched_start_wsp = None
-        matched_end_wsp = None
-        for start_wsp in start.wsp_list:
-            for end_wsp in end.wsp_list:
-                start_time = time.time()
-                score = comparison(start_wsp, end_wsp)
-                end_time = time.time()
-                if score > best_score:
-                    print(start_wsp.name, end_wsp.name)
-                    best_score = score
-                    matched_start_wsp = start_wsp
-                    matched_end_wsp = end_wsp
-        data[method] = {"score": best_score, "time": (end_time - start_time),
-                        "start_wsp": {"name": matched_start_wsp.name, "definition": matched_start_wsp.definition,
-                                      "onyms": list(matched_start_wsp.onyms)},
-                        "end_wsp": {"name": matched_end_wsp.name, "definition": matched_end_wsp.definition,
-                                    "onyms": list(matched_end_wsp.onyms)}}
-    return data
+    if Word2Vec.contains(start_word) and Word2Vec.contains(end_word):
+        for method in COMPARING_METHODS:
+            print(method)
+            comparison = COMPARING_METHODS[method]
+            best_score = -1
+            matched_start_wsp = None
+            matched_end_wsp = None
+            for start_wsp in start.wsp_list:
+                for end_wsp in end.wsp_list:
+                    start_time = time.time()
+                    score = comparison(start_wsp, end_wsp)
+                    end_time = time.time()
+                    if score > best_score:
+                        print(start_wsp.name, end_wsp.name)
+                        best_score = score
+                        matched_start_wsp = start_wsp
+                        matched_end_wsp = end_wsp
+            data[method] = {"score": best_score, "time": (end_time - start_time),
+                            "start_wsp": {"name": matched_start_wsp.name, "definition": matched_start_wsp.definition,
+                                          "onyms": list(matched_start_wsp.onyms)},
+                            "end_wsp": {"name": matched_end_wsp.name, "definition": matched_end_wsp.definition,
+                                        "onyms": list(matched_end_wsp.onyms)}}
+        return data
+    else:
+        return None
 
 
 if __name__ == '__main__':
-    word_pairs = [("plane", "mathematics"), ("plane", "machine"), ("batting", "baseball"), ("sewing", "batting"),
-                  ("machine", "computer"), ("computer", "memory"), ("memory", "brain"), ("brain", "ideas")]
+    with open("data/1000_relations.json") as file:
+        word_pairs = json.load(file)
+    # word_pairs = [("plane", "mathematics"), ("plane", "machine"), ("batting", "baseball"), ("sewing", "batting"),
+    #               ("machine", "computer"), ("computer", "memory"), ("memory", "brain"), ("brain", "ideas")]
     for word_pair in word_pairs:
         word1 = word_pair[0]
         word2 = word_pair[1]
-        results = test_comparisons(word1, word2)
-        with open(f"data/comparisons/{word1}-{word2}.json", "w") as file:
-            json.dump(results, file, indent=2)
+        if not path.exists(f"data/comparisons/{word1}-{word2}.json"):
+            results = test_comparisons(word1, word2)
+            if results is not None:
+                with open(f"data/comparisons/{word1}-{word2}.json", "w") as file:
+                    json.dump(results, file, indent=2)

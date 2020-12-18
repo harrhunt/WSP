@@ -1,0 +1,455 @@
+{
+  "kind": "customsearch#search",
+  "url": {
+    "type": "application/json",
+    "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+  },
+  "queries": {
+    "request": [
+      {
+        "title": "Google Custom Search - plane",
+        "totalResults": "1030000000",
+        "searchTerms": "plane",
+        "count": 10,
+        "startIndex": 1,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "24fa609e619cf5843"
+      }
+    ],
+    "nextPage": [
+      {
+        "title": "Google Custom Search - plane",
+        "totalResults": "1030000000",
+        "searchTerms": "plane",
+        "count": 10,
+        "startIndex": 11,
+        "inputEncoding": "utf8",
+        "outputEncoding": "utf8",
+        "safe": "off",
+        "cx": "24fa609e619cf5843"
+      }
+    ]
+  },
+  "context": {
+    "title": "Google"
+  },
+  "searchInformation": {
+    "searchTime": 0.460097,
+    "formattedSearchTime": "0.46",
+    "totalResults": "1030000000",
+    "formattedTotalResults": "1,030,000,000"
+  },
+  "items": [
+    {
+      "kind": "customsearch#result",
+      "title": "Plane | Definition of Plane at Dictionary.com",
+      "htmlTitle": "<b>Plane</b> | Definition of <b>Plane</b> at Dictionary.com",
+      "link": "https://www.dictionary.com/browse/plane",
+      "displayLink": "www.dictionary.com",
+      "snippet": "noun \u00b7 an airplane or a hydroplane: to take a plane to Dallas. \u00b7 a thin, flat or \ncurved, extended section of an airplane or a hydroplane, affording a supporting \nsurface.",
+      "htmlSnippet": "noun &middot; an airplane or a hydroplane: to take a <b>plane</b> to Dallas. &middot; a thin, flat or <br>\ncurved, extended section of an airplane or a hydroplane, affording a supporting <br>\nsurface.",
+      "cacheId": "u24GxpbvjHkJ",
+      "formattedUrl": "https://www.dictionary.com/browse/plane",
+      "htmlFormattedUrl": "https://www.dictionary.com/browse/<b>plane</b>",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSwcf3SjW2-7T0Y8Gq-s5mGt58UG4-m-JDLMIcHlGTPisKRDoIb3EwhmeC7",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://www.dictionary.com/assets/dictionary-social-logo-93d290770ddf5b8c309b6e5ce9dcaac9.png",
+            "twitter:card": "summary",
+            "fb:app_id": "127444090629600",
+            "og:site_name": "www.dictionary.com",
+            "twitter:site": "@Dictionarycom",
+            "msvalidate.01": "DF5542D7723770377E9ABFF59AC1DC97",
+            "viewport": "width=device-width, initial-scale=1.0",
+            "og:title": "Definition of plane | Dictionary.com",
+            "fb:admins": "100000304287730;109125464873",
+            "og:description": "Definition of plane from Dictionary.com, the world\u2019s leading online source for English definitions, pronunciations, word origins, idioms, Word of the Day, and more."
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://www.dictionary.com/assets/dictionary-social-logo-93d290770ddf5b8c309b6e5ce9dcaac9.png"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Plane | Definition of Plane by Merriam-Webster",
+      "htmlTitle": "<b>Plane</b> | Definition of <b>Plane</b> by Merriam-Webster",
+      "link": "https://www.merriam-webster.com/dictionary/plane",
+      "displayLink": "www.merriam-webster.com",
+      "snippet": "Kids Definition of plane \u00b7 1 : airplane \u00b7 2 : a surface in which if any two points are \nchosen a straight line joining them lies completely in that surface \u00b7 3 : a level of\u00a0...",
+      "htmlSnippet": "Kids Definition of <b>plane</b> &middot; 1 : airplane &middot; 2 : a surface in which if any two points are <br>\nchosen a straight line joining them lies completely in that surface &middot; 3 : a level of&nbsp;...",
+      "cacheId": "SQQ2XJGgkmgJ",
+      "formattedUrl": "https://www.merriam-webster.com/dictionary/plane",
+      "htmlFormattedUrl": "https://www.merriam-webster.com/dictionary/<b>plane</b>",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSKksTSKYwpW8It403nrjw5t1_a8pLO2PI6ImEG7uvFrNfacgiziPZgG-_O",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "metatags": [
+          {
+            "msapplication-tilecolor": "#2b5797",
+            "og:image": "https://merriam-webster.com/assets/mw/static/social-media-share/mw-logo-245x245@1x.png",
+            "twitter:title": "Definition of PLANE",
+            "twitter:card": "summary",
+            "theme-color": "#ffffff",
+            "twitter:url": "https://www.merriam-webster.com/dictionary/plane",
+            "og:title": "Definition of PLANE",
+            "twitter:aria-text": "Share the Definition of plane on Twitter",
+            "og:aria-text": "Post the Definition of plane to Facebook",
+            "og:description": "airplane; one of the main supporting surfaces of an airplane; a surface in which if any two points are chosen a straight line joining them lies wholly in that surface\u2026 See the full definition",
+            "twitter:image": "https://merriam-webster.com/assets/mw/static/social-media-share/mw-logo-245x245@1x.png",
+            "referrer": "unsafe-url",
+            "fb:app_id": "178450008855735",
+            "twitter:site": "@MerriamWebster",
+            "viewport": "width=device-width, initial-scale=1.0",
+            "twitter:description": "airplane; one of the main supporting surfaces of an airplane\u2026 See the full definition",
+            "og:url": "https://www.merriam-webster.com/dictionary/plane"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://merriam-webster.com/assets/mw/static/social-media-share/mw-logo-245x245@1x.png"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Plane (geometry) - Wikipedia",
+      "htmlTitle": "<b>Plane</b> (geometry) - Wikipedia",
+      "link": "https://en.wikipedia.org/wiki/Plane_(geometry)",
+      "displayLink": "en.wikipedia.org",
+      "snippet": "In mathematics, a plane is a flat, two-dimensional surface that extends infinitely \nfar. A plane is the two-dimensional analogue of a point (zero dimensions), a line\n\u00a0...",
+      "htmlSnippet": "In mathematics, a <b>plane</b> is a flat, two-dimensional surface that extends infinitely <br>\nfar. A <b>plane</b> is the two-dimensional analogue of a point (zero dimensions), a line<br>\n&nbsp;...",
+      "cacheId": "xOmRQVLTUAEJ",
+      "formattedUrl": "https://en.wikipedia.org/wiki/Plane_(geometry)",
+      "htmlFormattedUrl": "https://en.wikipedia.org/wiki/<b>Plane</b>_(geometry)",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRPgCp2S3ajLDFuBsSKbvDkQSBK0voTHtce5ZkGd3pfxmFBtHyINJQ8BWs",
+            "width": "277",
+            "height": "182"
+          }
+        ],
+        "metatags": [
+          {
+            "referrer": "origin",
+            "og:image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Plane_equation_qtl3.svg/1200px-Plane_equation_qtl3.svg.png"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Plane_equation_qtl3.svg/1200px-Plane_equation_qtl3.svg.png"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "What's The Risk Of Catching COVID-19 On A Plane? And Do Masks ...",
+      "htmlTitle": "What&#39;s The Risk Of Catching COVID-19 On A <b>Plane</b>? And Do Masks ...",
+      "link": "https://www.npr.org/sections/goatsandsoda/2020/10/20/925892185/do-masks-really-cut-your-risk-of-catching-covid-19-on-long-plane-flights",
+      "displayLink": "www.npr.org",
+      "snippet": "6 hours ago ... On an eight-hour Emirates flight, with mask-wearing enforced, a whopping 27 \ncoronavirus-positive people boarded the plane in Dubai.",
+      "htmlSnippet": "6 hours ago <b>...</b> On an eight-hour Emirates flight, with mask-wearing enforced, a whopping 27 <br>\ncoronavirus-positive people boarded the <b>plane</b> in Dubai.",
+      "formattedUrl": "https://www.npr.org/.../do-masks-really-cut-your-risk-of-catching-covid-19- on-long-plane-flights",
+      "htmlFormattedUrl": "https://www.npr.org/.../do-masks-really-cut-your-risk-of-catching-covid-19- on-long-<b>plane</b>-flights",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTrPVtvypk2AGfWfP2EOx29Lhv97OdeAN5NAnxcBriLsQ5qcVQGaq5Hhjc",
+            "width": "300",
+            "height": "168"
+          }
+        ],
+        "speakablespecification": [
+          {
+            "cssselector": "[data-is-speakable]"
+          }
+        ],
+        "metatags": [
+          {
+            "date": "2020-10-20",
+            "og:image": "https://media.npr.org/assets/img/2020/10/20/flying_wide-d5634ce0b932b96a7e40f84cbceddf6849301063.jpg?s=1400",
+            "og:type": "article",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Do Masks On Plane Flights Really Cut Your Risk Of Catching COVID-19?",
+            "og:site_name": "NPR.org",
+            "twitter:domain": "npr.org",
+            "og:title": "Do Masks On Plane Flights Really Cut Your Risk Of Catching COVID-19?",
+            "rating": "General",
+            "og:description": "On an eight-hour Emirates flight, with mask-wearing enforced, a whopping 27 coronavirus-positive people boarded the plane in Dubai. Guess how many passengers got infected?",
+            "fb:pages": "10643211755",
+            "twitter:image:src": "https://media.npr.org/assets/img/2020/10/20/flying_wide-d5634ce0b932b96a7e40f84cbceddf6849301063.jpg?s=1400",
+            "fb:app_id": "138837436154588",
+            "twitter:site": "@NPR",
+            "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+            "article:content_tier": "free",
+            "og:url": "https://www.npr.org/sections/goatsandsoda/2020/10/20/925892185/do-masks-really-cut-your-risk-of-catching-covid-19-on-long-plane-flights",
+            "article:opinion": "false"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://media.npr.org/assets/img/2020/10/20/flying_wide-d5634ce0b932b96a7e40f84cbceddf6849301063.jpg?s=1400"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Plane - Wikipedia",
+      "htmlTitle": "<b>Plane</b> - Wikipedia",
+      "link": "https://en.wikipedia.org/wiki/Plane",
+      "displayLink": "en.wikipedia.org",
+      "snippet": "Plane or planes may refer to: Airplane or aeroplane or informally plane, a \npowered, fixed-wing aircraft. Contents. 1 Arts, entertainment and media; 2 Places\n\u00a0...",
+      "htmlSnippet": "<b>Plane</b> or <b>planes</b> may refer to: Airplane or aeroplane or informally <b>plane</b>, a <br>\npowered, fixed-wing aircraft. Contents. 1 Arts, entertainment and media; 2 Places<br>\n&nbsp;...",
+      "cacheId": "uLUHQkIe5eAJ",
+      "formattedUrl": "https://en.wikipedia.org/wiki/Plane",
+      "htmlFormattedUrl": "https://en.wikipedia.org/wiki/<b>Plane</b>",
+      "pagemap": {
+        "metatags": [
+          {
+            "referrer": "origin"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "CDC to passengers and workers: Wear a mask when you are on a ...",
+      "htmlTitle": "CDC to passengers and workers: Wear a mask when you are on a ...",
+      "link": "https://www.washingtonpost.com/health/2020/10/19/cdc-mask-plane-train-bus/",
+      "displayLink": "www.washingtonpost.com",
+      "snippet": "1 day ago ... CDC to passengers and workers: Wear a mask when you are on a plane, train, \nbus or other public transit. Federal health authorities advised\u00a0...",
+      "htmlSnippet": "1 day ago <b>...</b> CDC to passengers and workers: Wear a mask when you are on a <b>plane</b>, train, <br>\nbus or other public transit. Federal health authorities advised&nbsp;...",
+      "cacheId": "KGQfwyKaIVEJ",
+      "formattedUrl": "https://www.washingtonpost.com/health/2020/.../cdc-mask-plane-train-bus/",
+      "htmlFormattedUrl": "https://www.washingtonpost.com/health/2020/.../cdc-mask-<b>plane</b>-train-bus/",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq7-YtX4PDwHGQsskPO3JlM9Uu5ilO7bUb-u0YrGc-FWCavOad_8bkLwoE",
+            "width": "275",
+            "height": "183"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/ATSOA3F25MI6VF6BNTYRN77CNQ.jpg&w=1440",
+            "og:type": "article",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "CDC to passengers and workers: Wear a mask when you are on a plane, train, bus or other public transit",
+            "article:published_time": "2020-10-19T21:00:43.279Z",
+            "article:section": "Health",
+            "og:site_name": "Washington Post",
+            "og:title": "CDC to passengers and workers: Wear a mask when you are on a plane, train, bus or other public transit",
+            "og:description": "The guidance was issued following pressure from the airline industry and amid surging cases of coronavirus in the United States and strong evidence on the effectiveness of masks in curbing transmission, according to CDC officials.",
+            "next-head-count": "2",
+            "twitter:site": "@WashingtonPost",
+            "article:modified_time": "2020-10-20T12:36:29.829Z",
+            "viewport": "width=device-width, initial-scale=1",
+            "twitter:description": "The guidance was issued following pressure from the airline industry and amid surging cases of coronavirus in the United States and strong evidence on the effectiveness of masks in curbing transmission, according to CDC officials.",
+            "article:content_tier": "metered",
+            "og:url": "https://www.washingtonpost.com/health/2020/10/19/cdc-mask-plane-train-bus/",
+            "last_updated_date": "2020-10-20T12:36:29.829Z",
+            "article:opinion": "false"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/ATSOA3F25MI6VF6BNTYRN77CNQ.jpg&w=1440"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Hawaiian Airlines - Flights to Hawaii, Plane Tickets & Airfare",
+      "htmlTitle": "Hawaiian Airlines - Flights to Hawaii, <b>Plane</b> Tickets &amp; Airfare",
+      "link": "https://www.hawaiianairlines.com/",
+      "displayLink": "www.hawaiianairlines.com",
+      "snippet": "Hawaiian Airlines, Hawaii's largest and longest-serving airline, offers non-stop \nservice to Hawaii from the U.S. mainland and international destinations.",
+      "htmlSnippet": "Hawaiian Airlines, Hawaii&#39;s largest and longest-serving airline, offers non-stop <br>\nservice to Hawaii from the U.S. mainland and international destinations.",
+      "cacheId": "IcS4FrCU06oJ",
+      "formattedUrl": "https://www.hawaiianairlines.com/",
+      "htmlFormattedUrl": "https://www.hawaiianairlines.com/",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTCOrga0pJnybzcnYlmKSqcXkn-rxkOXNOGPZc-hDCNXtf7-fUEq0JKDKk",
+            "width": "277",
+            "height": "182"
+          }
+        ],
+        "metatags": [
+          {
+            "vicurrentdatetime": "637388387557188837",
+            "apple-itunes-app": "app-id=575400964",
+            "viewport": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://img.s-hawaiianairlines.com/static/images/coronavirus/covid-testing-images/image---covid-testing.png?version=ee59&sc_lang=en"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "plane - Wiktionary",
+      "htmlTitle": "<b>plane</b> - Wiktionary",
+      "link": "https://en.wiktionary.org/wiki/plane",
+      "displayLink": "en.wiktionary.org",
+      "snippet": "NounEdit. plane (plural planes). A level or flat surface. (geometry) A flat surface \nextending\u00a0...",
+      "htmlSnippet": "NounEdit. <b>plane</b> (plural <b>planes</b>). A level or flat surface. (geometry) A flat surface <br>\nextending&nbsp;...",
+      "cacheId": "C3hsG8lQFO8J",
+      "formattedUrl": "https://en.wiktionary.org/wiki/plane",
+      "htmlFormattedUrl": "https://en.wiktionary.org/wiki/<b>plane</b>",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRI3oU32MU6BLxnJ5HcR3wFqZjxwIXlTbSb7uqTuK86UBiBJJC1eC3aKUo",
+            "width": "256",
+            "height": "197"
+          }
+        ],
+        "metatags": [
+          {
+            "referrer": "origin",
+            "og:image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Stanley_No10_carriagemakers_rebate_plane.jpg/1200px-Stanley_No10_carriagemakers_rebate_plane.jpg",
+            "theme-color": "#eaecf0",
+            "viewport": "width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Stanley_No10_carriagemakers_rebate_plane.jpg/1200px-Stanley_No10_carriagemakers_rebate_plane.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Scale model of futuristic plane makes successful maiden flight ...",
+      "htmlTitle": "Scale model of futuristic <b>plane</b> makes successful maiden flight ...",
+      "link": "https://www.cnn.com/videos/travel/2020/09/07/flying-v-maiden-flight-travel-lon-orig-tp.cnn",
+      "displayLink": "www.cnn.com",
+      "snippet": "Sep 7, 2020 ... Researchers in the Netherlands \u200bsay they have conducted a successful maiden \nflight of a scale model of the Flying-V, a plane that could one\u00a0...",
+      "htmlSnippet": "Sep 7, 2020 <b>...</b> Researchers in the Netherlands \u200bsay they have conducted a successful maiden <br>\nflight of a scale model of the Flying-V, a <b>plane</b> that could one&nbsp;...",
+      "formattedUrl": "https://www.cnn.com/videos/.../flying-v-maiden-flight-travel-lon-orig-tp.cnn",
+      "htmlFormattedUrl": "https://www.cnn.com/videos/.../flying-v-maiden-flight-travel-lon-orig-tp.cnn",
+      "pagemap": {
+        "thumbnail": [
+          {
+            "src": "https://cdn.cnn.com/cnnnext/dam/assets/200907161441-klm-flying-v-maiden-flight-super-tease.jpg"
+          }
+        ],
+        "metatags": [
+          {
+            "template-top": "travel,videos,video,bra-saved-by-the-future,vid-vid-vls-col,col-stories-worth-watching",
+            "og:image": "https://cdn.cnn.com/cnnnext/dam/assets/200907161441-klm-flying-v-maiden-flight-super-tease.jpg",
+            "twitter:card": "summary_large_image",
+            "og:image:width": "0",
+            "theme-color": "#000000",
+            "og:site_name": "CNN",
+            "section": "travel",
+            "vr:canonical": "https://www.cnn.com/videos/travel/2020/09/07/flying-v-maiden-flight-travel-lon-orig-tp.cnn",
+            "og:description": "Researchers in the Netherlands \u200bsay they have conducted a successful maiden flight of a scale model of the Flying-V, a plane that could one day carry passengers in its wings.",
+            "twitter:image": "https://cdn.cnn.com/cnnnext/dam/assets/200907161441-klm-flying-v-maiden-flight-super-tease.jpg",
+            "og:pubdate": "2020-09-07T15:33:57Z",
+            "twitter:site": "@CNNTravel",
+            "lastmod": "2020-10-16T09:34:55Z",
+            "pubdate": "2020-09-07T15:33:57Z",
+            "twitter:title": "Scale model of futuristic plane makes successful maiden flight - CNN Video",
+            "og:type": "video.other",
+            "thumbnail": "https://cdn.cnn.com/cnnnext/dam/assets/200907161441-klm-flying-v-maiden-flight-super-tease.jpg",
+            "og:title": "Scale model of futuristic plane makes successful maiden flight - CNN Video",
+            "og:image:height": "0",
+            "fb:pages": "5550296508,18793419640",
+            "referrer": "unsafe-url",
+            "fb:app_id": "80401312489",
+            "viewport": "width=device-width, initial-scale=1.0, minimum-scale=1.0",
+            "twitter:description": "Researchers in the Netherlands \u200bsay they have conducted a successful maiden flight of a scale model of the Flying-V, a plane that could one day carry passengers in its wings.",
+            "og:url": "https://www.cnn.com/videos/travel/2020/09/07/flying-v-maiden-flight-travel-lon-orig-tp.cnn"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://cdn.cnn.com/cnnnext/dam/assets/200907161441-klm-flying-v-maiden-flight-super-tease.jpg",
+            "width": "299",
+            "type": "1",
+            "height": "168"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "customsearch#result",
+      "title": "Virtual Dulles Plane Pull",
+      "htmlTitle": "Virtual Dulles <b>Plane</b> Pull",
+      "link": "https://www.specialolympicsva.org/virtual-plane-pull",
+      "displayLink": "www.specialolympicsva.org",
+      "snippet": "This year, Plane Pull is going VIRTUAL for the first time! You can \u201cpull\u201d with us \nfrom the comfort of your own home! The event will occur virtually during the week\n\u00a0...",
+      "htmlSnippet": "This year, <b>Plane</b> Pull is going VIRTUAL for the first time! You can \u201cpull\u201d with us <br>\nfrom the comfort of your own home! The event will occur virtually during the week<br>\n&nbsp;...",
+      "cacheId": "K_xqY_488HoJ",
+      "formattedUrl": "https://www.specialolympicsva.org/virtual-plane-pull",
+      "htmlFormattedUrl": "https://www.specialolympicsva.org/virtual-<b>plane</b>-pull",
+      "pagemap": {
+        "cse_thumbnail": [
+          {
+            "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRegoc0vTevK36wJd0XaqfYAJP092uYPSVRYNfS5U10iN4FY-zwsprEwcn1",
+            "width": "225",
+            "height": "225"
+          }
+        ],
+        "metatags": [
+          {
+            "og:image": "https://dotorg.brightspotcdn.com/dims4/default/2edefe7/2147483647/strip/true/crop/662x662+269+0/resize/1200x1200!/quality/90/?url=https%3A%2F%2Fdotorg.brightspotcdn.com%2F58%2F0c%2F5b6ba72849298aa17d59a4617d4a%2Fcutout-copy.jpg",
+            "og:image:width": "1200",
+            "og:image:alt": "default og image",
+            "og:type": "website",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Virtual Dulles Plane Pull",
+            "og:site_name": "Special Olympics Virginia",
+            "og:image:url": "https://dotorg.brightspotcdn.com/dims4/default/2edefe7/2147483647/strip/true/crop/662x662+269+0/resize/1200x1200!/quality/90/?url=https%3A%2F%2Fdotorg.brightspotcdn.com%2F58%2F0c%2F5b6ba72849298aa17d59a4617d4a%2Fcutout-copy.jpg",
+            "og:title": "Virtual Dulles Plane Pull",
+            "og:image:height": "1200",
+            "og:image:type": "image/jpeg",
+            "og:description": "This year, the Dulles Plane Pull is going VIRTUAL! You can \u201cpull\u201d with us from the comfort of your own home for the first time! The event will occur virtually during the week of October 12. Join us for a fitness competition Monday - Friday then celebrate with us on Saturday, October 17, our Virtual\u2026",
+            "og:image:secure_url": "https://dotorg.brightspotcdn.com/dims4/default/2edefe7/2147483647/strip/true/crop/662x662+269+0/resize/1200x1200!/quality/90/?url=https%3A%2F%2Fdotorg.brightspotcdn.com%2F58%2F0c%2F5b6ba72849298aa17d59a4617d4a%2Fcutout-copy.jpg",
+            "fb:app_id": "1037888583009921",
+            "twitter:site": "@SOlympicsVA",
+            "viewport": "width=device-width, initial-scale=1",
+            "twitter:description": "This year, the Dulles Plane Pull is going VIRTUAL! You can \u201cpull\u201d with us from the comfort of your own home for the first time! The event will occur virtually during the week of October 12. Join us for a fitness competition Monday - Friday then celebrate with us on Saturday, October 17, our Virtual Dulles Plane Pull day. Each team will be connected with a SOVA athlete coach to be motivated by and train unified with along the way and will have the opportunity to participate in three team contests!",
+            "brightspot.contentid": "00000173-b53c-d971-abfb-ff7cf7a20000",
+            "og:url": "https://www.specialolympicsva.org/virtual-plane-pull"
+          }
+        ],
+        "cse_image": [
+          {
+            "src": "https://dotorg.brightspotcdn.com/dims4/default/2edefe7/2147483647/strip/true/crop/662x662+269+0/resize/1200x1200!/quality/90/?url=https%3A%2F%2Fdotorg.brightspotcdn.com%2F58%2F0c%2F5b6ba72849298aa17d59a4617d4a%2Fcutout-copy.jpg"
+          }
+        ]
+      }
+    }
+  ]
+}

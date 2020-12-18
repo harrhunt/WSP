@@ -1,0 +1,537 @@
+{
+  "edges": [
+    {
+      "@id": "/a/[/r/IsA/,/c/en/tensiometer/n/wn/artifact/,/c/en/measuring_instrument/n/wn/artifact/]",
+      "@type": "Edge",
+      "dataset": "/d/wordnet/3.1",
+      "end": {
+        "@id": "/c/en/measuring_instrument/n/wn/artifact",
+        "@type": "Node",
+        "label": "measuring instrument",
+        "language": "en",
+        "sense_label": "n, artifact",
+        "term": "/c/en/measuring_instrument"
+      },
+      "license": "cc:by/4.0",
+      "rel": {
+        "@id": "/r/IsA",
+        "@type": "Relation",
+        "label": "IsA"
+      },
+      "start": {
+        "@id": "/c/en/tensiometer/n/wn/artifact",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "sense_label": "n, artifact",
+        "term": "/c/en/tensiometer"
+      },
+      "surfaceText": "[[tensiometer]] is a type of [[measuring instrument]]",
+      "weight": 2.0
+    },
+    {
+      "@id": "/a/[/r/RelatedTo/,/c/en/tensiometer/n/,/c/en/tensile_strength/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/tensile_strength",
+        "@type": "Node",
+        "label": "tensile strength",
+        "language": "en",
+        "term": "/c/en/tensile_strength"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/RelatedTo",
+        "@type": "Relation",
+        "label": "RelatedTo"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensiometer/n",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensiometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/FormOf/,/c/en/tensiometers/n/,/c/en/tensiometer/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/tensiometer",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "term": "/c/en/tensiometer"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/FormOf",
+        "@type": "Relation",
+        "label": "FormOf"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensiometers/n",
+        "@type": "Node",
+        "label": "tensiometers",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensiometers"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/FormOf/,/c/en/tensometer/n/,/c/en/tensiometer/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/tensiometer",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "term": "/c/en/tensiometer"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/FormOf",
+        "@type": "Relation",
+        "label": "FormOf"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensometer/n",
+        "@type": "Node",
+        "label": "tensometer",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/RelatedTo/,/c/en/tensiometer/n/,/c/en/tension/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/tension",
+        "@type": "Node",
+        "label": "tension",
+        "language": "en",
+        "term": "/c/en/tension"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/RelatedTo",
+        "@type": "Relation",
+        "label": "RelatedTo"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensiometer/n",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensiometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/DerivedFrom/,/c/en/microtensiometer/,/c/en/tensiometer/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/tensiometer",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "term": "/c/en/tensiometer"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/DerivedFrom",
+        "@type": "Relation",
+        "label": "DerivedFrom"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/microtensiometer",
+        "@type": "Node",
+        "label": "microtensiometer",
+        "language": "en",
+        "term": "/c/en/microtensiometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/RelatedTo/,/c/en/tensiometer/n/,/c/en/soil/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/soil",
+        "@type": "Node",
+        "label": "soil",
+        "language": "en",
+        "term": "/c/en/soil"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/RelatedTo",
+        "@type": "Relation",
+        "label": "RelatedTo"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensiometer/n",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensiometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/RelatedTo/,/c/en/tensiometer/n/,/c/en/tensiometry/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/tensiometry",
+        "@type": "Node",
+        "label": "tensiometry",
+        "language": "en",
+        "term": "/c/en/tensiometry"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/RelatedTo",
+        "@type": "Relation",
+        "label": "RelatedTo"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensiometer/n",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensiometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/RelatedTo/,/c/en/tensiometer/n/,/c/en/liquid/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/liquid",
+        "@type": "Node",
+        "label": "liquid",
+        "language": "en",
+        "term": "/c/en/liquid"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/RelatedTo",
+        "@type": "Relation",
+        "label": "RelatedTo"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensiometer/n",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensiometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/RelatedTo/,/c/en/tensiometer/n/,/c/en/tensiometric/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/tensiometric",
+        "@type": "Node",
+        "label": "tensiometric",
+        "language": "en",
+        "term": "/c/en/tensiometric"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/RelatedTo",
+        "@type": "Relation",
+        "label": "RelatedTo"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensiometer/n",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensiometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/RelatedTo/,/c/en/tensiometers/n/,/c/en/tensiometer/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/fr",
+      "end": {
+        "@id": "/c/en/tensiometer",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "term": "/c/en/tensiometer"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/RelatedTo",
+        "@type": "Relation",
+        "label": "RelatedTo"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/fr/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/fr",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensiometers/n",
+        "@type": "Node",
+        "label": "tensiometers",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensiometers"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/RelatedTo/,/c/en/microtensiometer/n/,/c/en/tensiometer/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/tensiometer",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "term": "/c/en/tensiometer"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/RelatedTo",
+        "@type": "Relation",
+        "label": "RelatedTo"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/microtensiometer/n",
+        "@type": "Node",
+        "label": "microtensiometer",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/microtensiometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/RelatedTo/,/c/en/tensiometer/n/,/c/en/wire/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/wire",
+        "@type": "Node",
+        "label": "wire",
+        "language": "en",
+        "term": "/c/en/wire"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/RelatedTo",
+        "@type": "Relation",
+        "label": "RelatedTo"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensiometer/n",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensiometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/RelatedTo/,/c/en/tensiometer/n/,/c/en/yarn/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/yarn",
+        "@type": "Node",
+        "label": "yarn",
+        "language": "en",
+        "term": "/c/en/yarn"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/RelatedTo",
+        "@type": "Relation",
+        "label": "RelatedTo"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensiometer/n",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensiometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    },
+    {
+      "@id": "/a/[/r/RelatedTo/,/c/en/tensiometer/n/,/c/en/surface_tension/]",
+      "@type": "Edge",
+      "dataset": "/d/wiktionary/en",
+      "end": {
+        "@id": "/c/en/surface_tension",
+        "@type": "Node",
+        "label": "surface tension",
+        "language": "en",
+        "term": "/c/en/surface_tension"
+      },
+      "license": "cc:by-sa/4.0",
+      "rel": {
+        "@id": "/r/RelatedTo",
+        "@type": "Relation",
+        "label": "RelatedTo"
+      },
+      "sources": [
+        {
+          "@id": "/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]",
+          "@type": "Source",
+          "contributor": "/s/resource/wiktionary/en",
+          "process": "/s/process/wikiparsec/2"
+        }
+      ],
+      "start": {
+        "@id": "/c/en/tensiometer/n",
+        "@type": "Node",
+        "label": "tensiometer",
+        "language": "en",
+        "sense_label": "n",
+        "term": "/c/en/tensiometer"
+      },
+      "surfaceText": null,
+      "weight": 1.0
+    }
+  ]
+}
+

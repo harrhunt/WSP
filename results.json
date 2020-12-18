@@ -1,0 +1,168 @@
+{
+  "average_link": {
+    "score": 0.1444850293919444,
+    "start_wsp": {
+      "name": "cat.n.4",
+      "onyms": [
+        "whip",
+        "cat-o'-nine-tails",
+        "cat"
+      ]
+    },
+    "end_wsp": {
+      "name": "dog.n.1",
+      "onyms": [
+        "unpleasant_woman",
+        "disagreeable_woman",
+        "frump",
+        "dog"
+      ]
+    }
+  },
+  "average_vector": {
+    "score": 0.7712176442146301,
+    "start_wsp": {
+      "name": "cat.n.1",
+      "onyms": [
+        "man",
+        "cat",
+        "sod",
+        "guy",
+        "adult_male",
+        "hombre",
+        "bozo"
+      ]
+    },
+    "end_wsp": {
+      "name": "dog.n.2",
+      "onyms": [
+        "cuss",
+        "dog",
+        "lad",
+        "gent",
+        "fella",
+        "feller",
+        "blighter",
+        "chap",
+        "bloke",
+        "fellow"
+      ]
+    }
+  },
+  "complete_link": {
+    "score": 0.07477199286222458,
+    "start_wsp": {
+      "name": "cat.n.4",
+      "onyms": [
+        "whip",
+        "cat-o'-nine-tails",
+        "cat"
+      ]
+    },
+    "end_wsp": {
+      "name": "dog.n.1",
+      "onyms": [
+        "unpleasant_woman",
+        "disagreeable_woman",
+        "frump",
+        "dog"
+      ]
+    }
+  },
+  "single_link": {
+    "score": 0.760945737361908,
+    "start_wsp": {
+      "name": "cat.n.0",
+      "onyms": [
+        "cat",
+        "domestic_cat",
+        "wildcat",
+        "felid",
+        "house_cat",
+        "Felis_domesticus",
+        "feline",
+        "true_cat",
+        "Felis_catus"
+      ]
+    },
+    "end_wsp": {
+      "name": "dog.n.0",
+      "onyms": [
+        "Welsh_corgi",
+        "working_dog",
+        "Newfoundland",
+        "pooch",
+        "dog",
+        "pack",
+        "coach_dog",
+        "griffon",
+        "Brussels_griffon",
+        "dalmatian",
+        "pug",
+        "spitz",
+        "lapdog",
+        "domesticated_animal",
+        "genus_Canis",
+        "cur",
+        "Great_Pyrenees",
+        "poodle_dog",
+        "Canis",
+        "bow-wow",
+        "mongrel",
+        "basenji",
+        "barker",
+        "flag",
+        "corgi",
+        "toy_dog",
+        "Newfoundland_dog",
+        "puppy",
+        "carriage_dog",
+        "poodle",
+        "canine",
+        "doggy",
+        "canid",
+        "Belgian_griffon",
+        "domestic_animal",
+        "Mexican_hairless",
+        "pug-dog",
+        "hunting_dog",
+        "toy",
+        "Canis_familiaris",
+        "domestic_dog",
+        "Leonberg",
+        "doggie",
+        "mutt"
+      ]
+    }
+  },
+  "total_vector": {
+    "score": 0.7712176442146301,
+    "start_wsp": {
+      "name": "cat.n.1",
+      "onyms": [
+        "man",
+        "cat",
+        "sod",
+        "guy",
+        "adult_male",
+        "hombre",
+        "bozo"
+      ]
+    },
+    "end_wsp": {
+      "name": "dog.n.2",
+      "onyms": [
+        "cuss",
+        "dog",
+        "lad",
+        "gent",
+        "fella",
+        "feller",
+        "blighter",
+        "chap",
+        "bloke",
+        "fellow"
+      ]
+    }
+  }
+}
