@@ -98,7 +98,6 @@ def get_related(word):
 
 
 def get_relationship(word1, word2):
-
     obj = requests.get(f"http://api.conceptnet.io/query?node=/c/en/{word1}&other=/c/en/{word2}")
     # Add the word itself to the list
     if obj.status_code != 200:
@@ -109,6 +108,35 @@ def get_relationship(word1, word2):
         obj = obj.json()
         return obj["edges"][0]["rel"]["label"]
 
+
+def get_pos(word1, word2):
+    obj = requests.get(f"http://api.conceptnet.io/query?node=/c/en/{word1}&other=/c/en/{word2}")
+    # Add the word itself to the list
+    if obj.status_code != 200:
+        print(f"Sleeping for one minute because status code is: {obj.status_code}")
+        time.sleep(60)
+        return get_pos(word1, word2)
+    else:
+        obj = obj.json()
+
+        pos = {obj["edges"][0]["start"]["term"].split("/")[-1]: obj["edges"][0]["start"]["sense_label"].split(", ")[
+            0] if "sense_label" in obj["edges"][0]["start"] else "",
+               obj["edges"][0]["end"]["term"].split("/")[-1]: obj["edges"][0]["end"]["sense_label"].split(", ")[
+                   0] if "sense_label" in obj["edges"][0]["end"] else ""}
+        return pos
+
+
+def get_raw(word):
+    stop = stopwords.words("english")
+
+    obj = requests.get(f"http://api.conceptnet.io/c/en/{word}?limit=300")
+    # Add the word itself to the list
+    if obj.status_code != 200:
+        print(f"Sleeping for one minute because status code is: {obj.status_code}")
+        time.sleep(60)
+        return get_raw(word)
+    else:
+        return obj.json()
 
 if __name__ == '__main__':
     # data = get_related("dog")
