@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 from word2vec import Word2Vec
 import numpy as np
 from os import path
+import re
 
 STOPWORDS = set(stopwords.words('english'))
 
@@ -50,7 +51,9 @@ class WSP:
         holonyms.extend(self.synset.substance_holonyms())
 
         # Glossary
-        definition = [word for word in self.definition if word not in STOPWORDS]
+        clean_definition = re.sub(r"[^A-z\s]+", " ", self.definition)
+        definition_words = clean_definition.split(" ")
+        definition = [word for word in definition_words if word not in STOPWORDS and word != '']
 
         # All synsets from the different -onyms
         all_synsets = [synonyms]
@@ -66,7 +69,7 @@ class WSP:
         for lemma in lemmas:
             self.onyms.add(lemma.name())
 
-        self.onyms.union(set(definition))
+        self.onyms = self.onyms.union(set(definition))
 
 
 class WSG:
@@ -84,6 +87,26 @@ class WSG:
 
 
 class WSPComparer:
+
+    @classmethod
+    def group_by_closest_definition(cls, wsg, definitions):
+        for definition in definitions:
+            vector = Word2Vec.total_vector(definition)
+            Word2Vec.add_vector(definition, vector)
+        for wsp in wsg.wsp_list:
+            vector = Word2Vec.total_vector(wsp.onyms)
+            Word2Vec.add_vector(wsp.name, vector)
+        pairs = {x: [] for x in definitions}
+        for wsp in wsg.wsp_list:
+            best = -1
+            best_def = None
+            for definition in definitions:
+                distance = Word2Vec.similarity(definition, wsp.name)
+                if distance > best:
+                    best = distance
+                    best_def = definition
+            pairs[best_def].append(wsp)
+        return pairs
 
     @classmethod
     def single_link(cls, start: WSP, end: WSP):
@@ -247,7 +270,7 @@ def test_comparisons(start_word: str, end_word: str):
         return None
 
 
-if __name__ == '__main__':
+def generate_comparisons():
     with open("data/1000_relations.json") as file:
         word_pairs = json.load(file)
     # word_pairs = [("plane", "mathematics"), ("plane", "machine"), ("batting", "baseball"), ("sewing", "batting"),
@@ -260,3 +283,7 @@ if __name__ == '__main__':
             if results is not None:
                 with open(f"data/comparisons/{word1}-{word2}.json", "w") as file:
                     json.dump(results, file, indent=2)
+
+
+if __name__ == '__main__':
+    generate_comparisons()
