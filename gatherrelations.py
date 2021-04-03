@@ -89,7 +89,7 @@ def clean_dictionary():
             if num_defs not in summary_stats:
                 summary_stats[num_defs] = {}
                 summary_stats[num_defs]["count"] = 0
-            summary_stats[num_defs] += 1
+            summary_stats[num_defs]["count"] += 1
             summary_stats["total"] += 1
             if 2 <= len(definitions) <= 5:
                 clean_list.append(word)
