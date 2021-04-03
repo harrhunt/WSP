@@ -11,8 +11,12 @@ from credentials import OXFORD_APP_KEY, OXFORD_APP_ID
 
 def get_entries(word):
     path = f"data/words/{word.lower()}.json"
+    with open("404.json", "r") as file:
+        missing = json.load(file)
+    if word in missing:
+        return 4041
     if exists(path):
-        print("Loaded from file")
+        # print("Loaded from file")
         with open(path, "r") as file:
             data = json.load(file)
     else:
@@ -22,6 +26,11 @@ def get_entries(word):
             data = r.json()
             with open(path, "w") as file:
                 json.dump(data, file)
+        elif r.status_code == 404:
+            missing.append(word)
+            with open("404.json", "w") as file:
+                json.dump(missing, file)
+            return r.status_code
         else:
             return r.status_code
     return data["results"]
@@ -29,8 +38,12 @@ def get_entries(word):
 
 def get_lemmas(word):
     path = f"data/lemmas/{word.lower()}.json"
+    with open("404.json", "r") as file:
+        missing = json.load(file)
+    if word in missing:
+        return 4041
     if exists(path):
-        print("Loaded from file")
+        # print("Loaded from file")
         with open(path, "r") as file:
             data = json.load(file)
     else:
@@ -40,6 +53,11 @@ def get_lemmas(word):
             data = r.json()
             with open(path, "w") as file:
                 json.dump(data, file)
+        elif r.status_code == 404:
+            missing.append(word)
+            with open("404.json", "w") as file:
+                json.dump(missing, file)
+            return r.status_code
         else:
             return r.status_code
     return data["results"]
@@ -85,6 +103,8 @@ def get_defs(word, combine_lexical=True, sub_definitions=False):
 
 def get_all_coarse_defs(word):
     words = get_lemma_words(word)
+    if words is None:
+        return None
     definitions = []
     for word in words:
         definitions.extend(get_defs(word))
@@ -94,6 +114,9 @@ def get_all_coarse_defs(word):
 def get_lemma_words(word):
     words = []
     results = get_lemmas(word)
+    if isinstance(results, int):
+        print(results)
+        return None
     for result in results:
         for lex in result["lexicalEntries"]:
             for inflection in lex["inflectionOf"]:
