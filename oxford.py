@@ -11,7 +11,7 @@ from credentials import OXFORD_APP_KEY, OXFORD_APP_ID
 
 def get_entries(word):
     path = f"data/words/{word.lower()}.json"
-    with open("404.json", "r") as file:
+    with open("data/entry_404.json", "r") as file:
         missing = json.load(file)
     if word in missing:
         return 4041
@@ -28,7 +28,7 @@ def get_entries(word):
                 json.dump(data, file)
         elif r.status_code == 404:
             missing.append(word)
-            with open("404.json", "w") as file:
+            with open("data/entry_404.json", "w") as file:
                 json.dump(missing, file)
             return r.status_code
         else:
@@ -38,7 +38,7 @@ def get_entries(word):
 
 def get_lemmas(word):
     path = f"data/lemmas/{word.lower()}.json"
-    with open("404.json", "r") as file:
+    with open("data/lemma_404.json", "r") as file:
         missing = json.load(file)
     if word in missing:
         return 4041
@@ -55,7 +55,7 @@ def get_lemmas(word):
                 json.dump(data, file)
         elif r.status_code == 404:
             missing.append(word)
-            with open("404.json", "w") as file:
+            with open("data/lemma_404.json", "w") as file:
                 json.dump(missing, file)
             return r.status_code
         else:
@@ -68,7 +68,7 @@ def get_defs(word, combine_lexical=True, sub_definitions=False):
     combined_definitions = []
     results = get_entries(word)
     if isinstance(results, int):
-        return "404: word not found"
+        return None
     if combine_lexical:
         for result in results:
             # print(f"RESULT: {result}\n")
@@ -107,7 +107,9 @@ def get_all_coarse_defs(word):
         return None
     definitions = []
     for word in words:
-        definitions.extend(get_defs(word))
+        results = get_defs(word)
+        if results is not None:
+            definitions.extend(results)
     return definitions
 
 
@@ -125,35 +127,35 @@ def get_lemma_words(word):
     return words
 
 
-def save_words_not_found(wnf):
-    with open("404.json", "w") as file:
-        json.dump(wnf, file)
-
-
-def gather_for_relations():
-    global name, words
-    with open("404.json", "r") as file:
-        words_not_found = json.load(file)
-    files = glob.glob("data/comparisons/*.json")
-    for filename in files:
-        name = re.split("[/\\\\]", filename)[-1]
-        name = name.split(".")[0]
-        words = name.split("-")
-        for word in words:
-            if exists(f"data/words/{word}.json"):
-                continue
-            elif word in words_not_found:
-                continue
-            print(word)
-            results = get_entries(word)
-            if isinstance(results, int) and results != 200:
-                print(results)
-                if results != 404:
-                    save_words_not_found(words_not_found)
-                    exit(1)
-                words_not_found.append(word)
-            time.sleep(1)
-    save_words_not_found(words_not_found)
+# def save_words_not_found(wnf):
+#     with open("404.json", "w") as file:
+#         json.dump(wnf, file)
+#
+#
+# def gather_for_relations():
+#     global name, words
+#     with open("404.json", "r") as file:
+#         words_not_found = json.load(file)
+#     files = glob.glob("data/comparisons/*.json")
+#     for filename in files:
+#         name = re.split("[/\\\\]", filename)[-1]
+#         name = name.split(".")[0]
+#         words = name.split("-")
+#         for word in words:
+#             if exists(f"data/words/{word}.json"):
+#                 continue
+#             elif word in words_not_found:
+#                 continue
+#             print(word)
+#             results = get_entries(word)
+#             if isinstance(results, int) and results != 200:
+#                 print(results)
+#                 if results != 404:
+#                     save_words_not_found(words_not_found)
+#                     exit(1)
+#                 words_not_found.append(word)
+#             time.sleep(1)
+#     save_words_not_found(words_not_found)
 
 
 if __name__ == '__main__':
