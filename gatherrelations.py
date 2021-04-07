@@ -79,8 +79,9 @@ def clean_dictionary():
     summary_stats["total"] = 0
     with open("data/words_list.json", "r") as file:
         words = json.load(file)
+    total_size = len(words)
     clean_list = []
-    for word in words:
+    for i, word in enumerate(words):
         if word not in STOPWORDS:
             definitions = get_all_coarse_defs(word)
             if definitions is None:
@@ -93,6 +94,8 @@ def clean_dictionary():
             summary_stats["total"] += 1
             if 2 <= len(definitions) <= 5:
                 clean_list.append(word)
+            if i % 10000 == 0:
+                print(f"{(i / total_size) * 100:.2f}%")
     for stat in summary_stats:
         if stat != "total":
             summary_stats[stat]["percentage"] = (summary_stats[stat]["count"] / summary_stats["total"])
