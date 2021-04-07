@@ -94,11 +94,11 @@ def clean_dictionary():
             summary_stats["total"] += 1
             if 2 <= len(definitions) <= 5:
                 clean_list.append(word)
-            if i % 10000 == 0:
+            if i % 2000 == 0:
                 print(f"{(i / total_size) * 100:.2f}%")
     for stat in summary_stats:
         if stat != "total":
-            summary_stats[stat]["percentage"] = (summary_stats[stat]["count"] / summary_stats["total"])
+            summary_stats[stat]["proportion"] = (summary_stats[stat]["count"] / summary_stats["total"])
     print(len(clean_list))
     with open("data/cleaned_words_oxford_all.json", "w") as file:
         json.dump(clean_list, file)
