@@ -115,12 +115,13 @@ def get_lemma_words(word):
     words = []
     results = get_lemmas(word)
     if isinstance(results, int):
-        print(results)
+        # print(results)
         return None
     for result in results:
         for lex in result["lexicalEntries"]:
             for inflection in lex["inflectionOf"]:
-                words.append(inflection["id"])
+                if "/" not in inflection["id"]:
+                    words.append(inflection["id"])
     return words
 
 
