@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "provider": "Oxford University Press"
+  },
+  "results": [
+    {
+      "id": "co",
+      "language": "en",
+      "lexicalEntries": [
+        {
+          "inflectionOf": [
+            {
+              "id": "Co",
+              "text": "Co"
+            }
+          ],
+          "language": "en",
+          "lexicalCategory": {
+            "id": "residual",
+            "text": "Residual"
+          },
+          "text": "co"
+        },
+        {
+          "inflectionOf": [
+            {
+              "id": "CO",
+              "text": "CO"
+            }
+          ],
+          "language": "en",
+          "lexicalCategory": {
+            "id": "residual",
+            "text": "Residual"
+          },
+          "text": "co"
+        },
+        {
+          "inflectionOf": [
+            {
+              "id": "Co",
+              "text": "Co"
+            }
+          ],
+          "language": "en",
+          "lexicalCategory": {
+            "id": "other",
+            "text": "Other"
+          },
+          "text": "co"
+        },
+        {
+          "inflectionOf": [
+            {
+              "id": "CO",
+              "text": "CO"
+            }
+          ],
+          "language": "en",
+          "lexicalCategory": {
+            "id": "other",
+            "text": "Other"
+          },
+          "text": "co"
+        }
+      ],
+      "word": "co"
+    }
+  ]
+}
