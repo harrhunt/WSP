@@ -87,6 +87,8 @@ def clean_dictionary():
             if definitions is None:
                 continue
             num_defs = len(definitions)
+            if num_defs > 10:
+                print(definitions)
             if num_defs not in summary_stats:
                 summary_stats[num_defs] = {}
                 summary_stats[num_defs]["count"] = 0
