@@ -113,6 +113,8 @@ def get_all_coarse_defs(word):
     definitions = set(definitions)
     if '' in definitions:
         definitions.remove('')
+    if len(definitions) == 0:
+        return None
     return list(definitions)
 
 
