@@ -110,7 +110,10 @@ def get_all_coarse_defs(word):
         results = get_defs(word)
         if results is not None:
             definitions.extend(results)
-    return definitions
+    definitions = set(definitions)
+    if '' in definitions:
+        definitions.remove('')
+    return list(definitions)
 
 
 def get_lemma_words(word):
