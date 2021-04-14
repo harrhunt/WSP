@@ -11,10 +11,11 @@ STOPWORDS = set(stopwords.words('english'))
 
 
 def get_random_relations():
-    with open("data/cleaned_words_oxford.json", "r") as file:
+    with open("data/cleaned_words_oxford_all.json", "r") as file:
         words = json.load(file)
     list_of_relations = []
-    for word in words:
+    total_words = len(words)
+    for i, word in enumerate(words):
         relations = get_related(word)
         edges = list(relations.keys())
         if len(edges) > 0:
@@ -46,12 +47,15 @@ def get_random_relations():
                 if count > 10:
                     skip = True
                     break
+            if i % 1000 == 0:
+                print(f"{(i / total_words) * 100:.2f}%")
             if skip:
                 continue
             if relations[edge]["start"] == word:
                 list_of_relations.append((word, edge))
             else:
                 list_of_relations.append((edge, word))
+
     print(len(list_of_relations))
     with open(f"data/{len(list_of_relations)}_relations.json", "w") as file:
         json.dump(list_of_relations, file)
@@ -205,10 +209,10 @@ def filter_obscenities():
 
 
 if __name__ == '__main__':
-    clean_dictionary()
+    # clean_dictionary()
     # filter_obscenities_from_file("data/cleaned_words_oxford.json")
     # pick_n_words(100000)
-    # get_random_relations()
+    get_random_relations()
     # filter_obscenities()
     # word1 = wn.synsets("office")
     # word2 = wn.synsets("offices")
